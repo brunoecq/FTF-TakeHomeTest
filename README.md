@@ -1,29 +1,43 @@
-# app
+# Project that shows git commit history. It has live reload and some configurations options.
 
-## Project setup
+## Requirements
+```
+You need to install LTS of NODEJS, NPM, GIT AND VUE CLI (LATEST VERSIONS).
+```
+
+## Then clone the project
+```
+git clone https://github.com/brunoecq/FTF-TakeHomeTest.git
+```
+
+## Enter into the project
+```
+cd FTF-TakeHomeTest
+```
+
+## Install dependences
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Finally, browse the url that appeared in the terminal
+
+## And for production, then building it
 ```
 npm run build
 ```
 
-### Run your unit tests
+## Move to dist, in there you will find all files for deploy, then do it
 ```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
+copy files from dist to your /public folder.
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Enjoy with the app
+```
+ENJOY!!!
+```
