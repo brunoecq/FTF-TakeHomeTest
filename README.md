@@ -25,9 +25,11 @@ npm install
 npm run serve
 ```
 
-## Finally, browse the url that appeared in the terminal
+## Finally, browse the url that appeared in the terminal. Finish.
 
-## And for production, then building it
+
+
+# For production, building
 ```
 npm run build
 ```
