@@ -1,15 +1,15 @@
 <template>
   <div class="card my-3" :id="item.sha">
     <div class="card-content">
-      <h4 class="title"><a :href="item.html_url" class="card-link" target="_blank">Sha: {{ item.sha }}</a></h4>
+      <h4 class="title"><a :href="item.html_url" class="card-link" target="_blank">{{ id + 1 }}. Sha: {{ item.sha }}</a></h4>
       <p><small class="card-text text-muted mb-3">Date: {{ fixTime(item.commit.committer.date) }} <i class="text-muted">({{ agoTime(item.commit.committer.date) }})</i></small></p>
       <h6 class="card-subtitle mb-3">Message: {{ item.commit.message }} </h6>
     </div>
     <footer class="card-footer">
       <p class="card-footer-item" style="justify-content: left;">
-        <a v-if="item.author" :href="item.author.html_url" target="_blank">
+        <a v-if="item.author" :href="`https://github.com/${item.commit.author.name}`" target="_blank">
         <img class="profile-picture no-bottom" :src="item.author.avatar_url" />
-        <p class="mx-2 no-bottom up" ><small>{{ item.author.login}}</small></p>
+        <p class="mx-2 no-bottom up" ><small>{{ item.commit.author.name }}</small></p>
       </a>
       <img class="profile-picture no-bottom card-footer-item" v-else src="https://via.placeholder.com/25" />
       </p>
@@ -21,7 +21,7 @@
 import moment from 'moment';
 export default {
   name: "Card",
-  props: ["item"],
+  props: ["item", "id"],
   components: {
   },
   setup() {

@@ -16,7 +16,7 @@
                     <label for="interval" class="label">Interval (In seconds)</label>
                     <input class="input" type="text" name="interval" placeholder="Interval time (Default 120 seconds)" v-model="interval">
                     <span class="icon is-left">
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
                     </span>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <label for="username" class="label">Username</label>
                     <input class="input" type="text" name="username" placeholder="Git Username" v-model="username">
                     <span class="icon is-left">
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <i class="fas fa-user" aria-hidden="true"></i>
                     </span>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <label for="project" class="label">Project</label>
                     <input class="input" type="text" name="project" placeholder="Git Project" v-model="project">
                     <span class="icon is-left">
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                     </span>
                 </div>
             </div>
@@ -76,7 +76,6 @@ export default {
         refresh();
     });
     watch(project, (currentValue, oldValue) => {
-        debugger
         store.commit("SET_GIT_PROJECT", currentValue);
         refresh();
     });
@@ -98,6 +97,9 @@ export default {
 <style scoped>
 h3, p {
     font-family: Arial !important;
+}
+.control.has-icons-left .icon, .control.has-icons-right .icon {
+    top: 33px;
 }
 @media (min-width: 1200px){
     .container {

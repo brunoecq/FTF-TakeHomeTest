@@ -1,7 +1,7 @@
 <template>
 <div class="content">
   <div class="panel">
-    <Card v-for="(o, x) in listado" :key="x" :item="o" />
+    <Card v-for="(o, x) in listado" :key="x" :item="o" :id="x" />
   </div>
 </div>
 </template>
