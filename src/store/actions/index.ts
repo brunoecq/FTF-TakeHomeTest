@@ -15,6 +15,9 @@ type AugmentedActionContext = {
 
 export interface Actions {
   [ActionTypes.GET_DATA](
+    { commit }: AugmentedActionContext
+  ): Promise<any>,
+  [ActionTypes.GET_DATA_WITH_PARAMS](
     { commit }: AugmentedActionContext,
     payload: any
   ): Promise<any>
@@ -28,5 +31,9 @@ export const actions = {
         resolve(data);
       });
     })
+  },
+  async [ActionTypes.GET_DATA_WITH_PARAMS]({commit} : AugmentedActionContext, payload: any) {
+    const data = await Service.getCommitsHistoryAsyncByUrl(payload);
+    commit(MutationTypes.SET_DATA, data)
   },
 }

@@ -1,4 +1,7 @@
 export enum MutationTypes {
     SET_DATA = 'SET_DATA',
     SET_INTERVAL = 'SET_INTERVAL',
+    SET_BASE_URL = 'SET_BASE_URL',
+    SET_GIT_USERNAME = 'SET_GIT_USERNAME',
+    SET_GIT_PROJECT = 'SET_GIT_PROJECT'
 }

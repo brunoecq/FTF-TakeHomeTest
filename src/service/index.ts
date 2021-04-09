@@ -1,11 +1,11 @@
-import { getCommitUrl } from "@/helpers/getCommitUrl";
+import { getEnvUrl } from "@/helpers";
 import axios from 'axios'
 
 export class Service {
 
   public static async getCommitsHistoryAsync(cb: any): Promise<void> {
     try {
-      const response = await axios.get(`${getCommitUrl()}`);
+      const response = await axios.get(`${getEnvUrl()}`);
       const data = await response.data;
       cb(data.reverse());
     } catch (error) {
